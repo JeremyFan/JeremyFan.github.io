@@ -11,3 +11,11 @@ title: Jeremy's blog
 	</li>
 　　　　{% endfor %}
 </ul>
+<p>好玩的</p>
+<ul>
+	{% for project in site.projects %}
+	<li>
+		<a href="{{ site.baseurl }}{{ project.url }}">{{ post.title }}</a>
+	</li>
+　　　　{% endfor %}
+</ul>
