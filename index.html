@@ -14,10 +14,13 @@ title: Jeremy's blog
 <p>好玩的</p>
 <ul>
 	<li>
-		<a href="{{ site.baseurl }}{{ '/webstore.js' }}">{{ 'webstore.js' }}</a>
-	</li>
-	<li>
 		<a href="/webstore.js">webstore.js</a>
 	</li>
 </ul>
-<p>什么情况</p>
+<ul>
+	{% for project in site.projects %}
+	<li>{{ post.date | date_to_string }} 
+		<a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a>
+	</li>
+　　　　{% endfor %}
+</ul>
