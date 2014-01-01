@@ -93,7 +93,6 @@ body{
 }
 
 .sec2>.s-right>.content{
-	height:100%;
 	padding-top:100px;
 	padding-left:20px;
 }
@@ -105,13 +104,34 @@ body{
 }
 
 .sec3{
-	height:300px;
-	background-color: #eee;
+	position: relative;
+	background-color: #555;
+	text-align: center;
+}
+
+.sec3>.content{
+	position: absolute;
+	top:5%;
+	width:100%;
+	color:#000;
+}
+
+.sec3>.content>.title{
+	font-weight: lighter;
+	font-size: 1.5em;
+}
+.sec3>.content>p{
+	font-size:1.2em;
+	line-height: 1.5em;
+}
+
+.sec3 img{
+	width:100%;
 }
 
 .sec4{
-	height:520px;
-	background-color: #1abf87;
+	height:420px;
+	background-color: #9c3;
 }
 
 .sec4>.s-left{
@@ -122,9 +142,135 @@ body{
 	border-right:2px solid #fff;
 }
 
+.sec4>.s-left>.content{
+	padding-top: 100px;
+	padding-right:20px;
+	text-align: right;
+}
+
+.sec4>.s-left>.content>p{
+	margin-top:0;
+	color: #fff;
+	font-size: 1.2em;
+	line-height: 1.5em;
+}
+
 .sec4>.s-right{
+	position: relative;
 	height:100%;
 	padding-left:65%;
+}
+
+.sec4>.s-right>.s-right-c{
+	position: relative;
+	height: 100%;
+}
+
+.sec4>.s-right>.s-right-c>.title{
+	position: absolute;
+	top: 100px;
+	left: 20px;
+	margin:0;
+	color:#fff;
+	font-weight: lighter;
+	font-size: 1.5em;
+}
+
+.sec5{
+	position: relative;
+	height:620px;
+	background-color: #f6f6f6;
+}
+
+.sec5>.s-left{
+	float:left;
+	position: relative;
+	width:35%;
+	height:100%;
+	border-right:2px solid #bbb;
+}
+
+.sec5>.s-left>.title{
+	position: absolute;
+	top: 100px;
+	right: 20px;
+	margin:0;
+	color:#333;
+	font-weight: lighter;
+	font-size: 1.5em;
+}
+
+.sec5>.s-right{
+	height:100%;
+	padding-left:35%;
+}
+
+.sec5>.s-right>.content{
+	padding-top:100px;
+	padding-left:20px;
+}
+.sec5>.s-right>.content>p{
+	margin-top:0;
+	color:#333;
+	font-size:1.2em;
+	line-height: 1.5em;
+}
+
+.sec6{
+	position: relative;
+	text-align: center;
+}
+
+.sec6>.content{
+	position: absolute;
+	top:10%;
+	width:100%;
+	color:#fff;
+}
+
+.sec6>.content>.title{
+	margin-bottom: 50px;
+	font-weight: lighter;
+	font-size: 1.5em;
+}
+
+.sec6>.content>ul{
+	margin:0;
+	padding-left: 0;
+	list-style-type: none;
+}
+.sec6>.content>ul>li{
+	display:inline-block;
+	margin:0 100px;
+}
+.sec6>.content>ul>li>a{
+	float:left;
+	width:100px;
+	height:200px;
+	font-size:1.2em;
+	line-height:3em;
+	text-decoration: none;
+	color:#fff;
+}
+.sec6>.content>ul>li>a:hover{
+	color:#333;
+}
+.sec6>.content>ul>li>a>img{
+	display:block;
+}
+
+.sec6 .bg{
+	width:100%;
+}
+
+footer{
+	height:60px;
+	text-align: center;
+	color:#aaa;
+}
+footer p{
+	margin:0;
+	padding-top:30px;
 }
 
 /*回到顶部*/
