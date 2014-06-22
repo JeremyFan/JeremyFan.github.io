@@ -2,25 +2,12 @@
 layout: default
 title: Jeremy's blog
 ---
-<h2>{{ page.title }}</h2>
-<p>最新文章</p>
-<ul>
-	{% for post in site.posts %}
-	<li>{{ post.date | date_to_string }} 
-		<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-	</li>
+
+<ul class="articlelist">
+{% for post in site.posts %}
+<li>{{ post.date | date_to_string }} 
+	<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+</li>
 　　　　{% endfor %}
 </ul>
-<p>好玩的</p>
-<ul>
-	<li>
-		<a href="/webstore.js">webstore.js</a>
-	</li>
-</ul>
-<ul>
-	{% for project in site.projects %}
-	<li>{{ post.date | date_to_string }} 
-		<a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a>
-	</li>
-　　　　{% endfor %}
-</ul>
+

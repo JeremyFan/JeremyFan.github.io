@@ -1,0 +1,44 @@
+html{
+	font:14px "Helvetica Neue",Helvetica,Tahoma,Arial,sans-serif;;
+}
+
+aside{
+	position:fixed;
+	left:25px;
+}
+
+aside .contact{
+	padding-left:0;
+	list-style: none;
+}
+
+aside .contact>li{
+	float:left;
+}
+
+aside .contact>li>a{
+	float:left;
+	width:30px;
+	height:25px;
+	background-repeat:no-repeat;
+	background-size:25px 25px;
+}
+aside .contact>li>a.weibo{
+	background-image:url(../images/icon.weibo.png);
+}
+aside .contact>li>a.github{
+	background-image:url(../images/icon.github2.png);
+}
+aside .contact>li>a.twitter{
+	background-image:url(../images/icon.twitter.png);
+}
+
+
+section{
+	width:500px;
+	margin:0 auto;
+}
+
+section .articlelist{
+	list-style:none;
+}
