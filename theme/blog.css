@@ -47,3 +47,12 @@ section{
 section .articlelist{
 	list-style:none;
 }
+
+section .articlelist>li>a{
+	font-size:1.2em;
+}
+
+section .articlelist>li>time{
+	font-size:0.8em;
+	color:#666;
+}

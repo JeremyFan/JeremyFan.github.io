@@ -2,11 +2,14 @@
 layout: default
 title: Jeremy's blog
 ---
-
+<h2>
+	Newest posts
+</h2>
 <ul class="articlelist">
 {% for post in site.posts %}
-<li>{{ post.date | date_to_string }} 
+<li>
 	<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+	Post on <time>{{ post.date | date_to_string }} </time>
 </li>
 　　　　{% endfor %}
 </ul>
