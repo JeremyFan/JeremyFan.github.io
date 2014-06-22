@@ -7,6 +7,11 @@ aside{
 	left:25px;
 }
 
+aside .home{
+	text-decoration: none;
+	color:#000;
+}
+
 aside .contact{
 	padding-left:0;
 	list-style: none;
