@@ -9,7 +9,7 @@ title: Jeremy's blog
 {% for post in site.posts %}
 <li>
 	<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-	Post on <time>{{ post.date | date_to_string }} </time>
+	<span class="time">Post on <time>{{ post.date | date_to_string }} </time></span>
 </li>
 　　　　{% endfor %}
 </ul>

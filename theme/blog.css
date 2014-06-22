@@ -1,6 +1,9 @@
 html{
 	font:14px "Helvetica Neue",Helvetica,Tahoma,Arial,sans-serif;;
 }
+body{
+	margin:0;
+}
 
 aside{
 	position:fixed;
@@ -49,10 +52,10 @@ section .articlelist{
 }
 
 section .articlelist>li>a{
-	font-size:1.2em;
+	font-size:1.1em;
 }
 
-section .articlelist>li>time{
+section .articlelist>li>.time{
 	font-size:0.8em;
 	color:#666;
 }
