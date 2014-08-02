@@ -1,16 +1,156 @@
----
-layout: default
-title: Jeremy's blog
----
-<h2>
-	Newest posts
-</h2>
-<ul class="articlelist">
-{% for post in site.posts %}
-<li>
-	<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-	<span class="time">Post on <time>{{ post.date | date_to_string }} </time></span>
-</li>
-　　　　{% endfor %}
-</ul>
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Hi，范大喜</title>
+		<link rel="stylesheet" href="index.css">
+	</head>
+	<body id="bd">
+		<div class="sec1">
+			<img class="bg" src="images/1f.jpg">
+			<p class="hi">H i，我是 LOHAS 范大喜</p>
+		</div>
+		<nav class="nav">
+			<p>L O V E</p>
+			<ul>
+				<li><a data-href="program">编程</a></li>
+				<li><a>生活</a></li>
+				<li><a>音乐</a></li>
+				<li><a data-href="sport">运动</a></li>
+			</ul>
+		</nav>
+		<div id="program" class="sec2">
+			<div class="s-left">
+				<h2 class="title">
+					编 程
+				</h2>
+			</div>
+			<div class="s-right">
+				<div class="content">
+					<p>我是一名前端工程师</p>
+					<p>写很多 HTML & CSS & JavaScript / jQuery</p>
+					<p>接触过 Bootstrap & EasyUI 等前端框架</p>
+					<p>熟悉Ajax，轻松和后台交互</p>
+					<p>能写服务端代码，写过 .net / C#</p>
+					<p>懂一些 SQL</p>
+				</div>
+			</div>
+		</div>
+		<div class="sec3">
+			<div class="s-left"></div>
+			<div class="s-right"></div>
+		</div>
+		<div id="sport" class="sec4">
+			<div class="s-left"></div>
+			<div class="s-right"></div>
+		</div>
 
+		<a id="backtop"></a>
+	</body>
+	<script>
+		window.onload=function(){
+			var backTop=document.getElementById('backtop'),
+				clientHeight=document.documentElement.clientHeight,
+				timer,	// 定时器
+				inFly = false;	// 是否在飞行中
+			window.onscroll=function(){
+				var top= getScrollTop();
+				if(top>clientHeight){
+					backtop.style.display='block';
+				}
+				else{
+					backtop.style.display='none';
+				}
+
+				// if(inFly){
+				// 	clearInterval(timer);				
+				// }
+				// inFly=true;
+			}
+
+			backtop.onclick=function(){
+				flyTo('bd');
+			}
+
+			var as=document.querySelectorAll('.nav ul a');
+			as.onmouseover=function(){
+				alert()
+			}
+
+			for(var i=0;i<as.length;i++){
+				var a=as[i];
+				a.onmouseover=function(){
+					for(var j=0;j<as.length;j++){
+						as[j].className='shadow';
+					}
+					this.className='';
+				};
+				a.onmouseout=function(){
+					for(var j=0;j<as.length;j++){
+						as[j].className='';
+					}
+				}
+				a.onclick=function(){
+					// debugger
+					flyTo(this.attributes['data-href'].value);
+				}
+			}
+
+			/// 飞到指定地方
+			function flyTo(eleId){
+				var ele=document.getElementById(eleId),
+					top=getElementOffsetTop(ele),
+					currentTop=getScrollTop(),
+					isDown=top>currentTop,	// 是否是向下滚动 
+					s; // 每次移动距离
+
+				if(isDown){
+					timer=setInterval(function(){
+						// debugger
+						currentTop=getScrollTop();
+						s=Math.ceil((top-currentTop)/15);
+						setScrollTop(currentTop+s);
+
+						// inFly=false;
+						if(top<=currentTop){
+							clearInterval(timer);
+						}
+					},10)
+				}
+				else{
+					timer=setInterval(function(){
+						currentTop=getScrollTop();
+						s=Math.floor((top-currentTop)/15);
+						setScrollTop(currentTop+s);
+
+						// inFly=false;
+						if(currentTop<=top){
+							clearInterval(timer);
+						}
+					},10)
+				}
+			}
+		}
+
+		// 获取元素Offset Top
+		function getElementOffsetTop(ele){
+			var actualTop=ele.offsetTop,
+				current=ele.offsetParent;
+			while(current!==null){
+				actualTop+=current.offsetTop;
+				current=current.offsetParent;
+			}
+			return actualTop;
+		}
+
+		/// 获取当前滚动高度
+		function getScrollTop(){
+			return document.body.scrollTop || document.documentElement.scrollTop;
+		}
+
+		function setScrollTop(top){
+			document.body.scrollTop=document.documentElement.scrollTop=top;
+		}
+
+	</script>
+</html>

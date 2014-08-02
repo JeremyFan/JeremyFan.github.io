@@ -1,0 +1,144 @@
+html{
+	font:14px/1.2 'Microsoft YaHei' Arial,Sans-serif;
+}
+
+body{
+	height:100%;
+	margin:0;
+}
+
+.sec1{
+	position: relative;
+	height:620px;
+	padding-bottom:10px;
+	background-color:#000;
+	text-align: center;
+}
+
+.sec1>.hi{
+	position: absolute;
+	top:25%;
+	width:100%;
+	color:#fff;
+	font-size:2em;
+}
+
+.sec1>.bg{
+	/*-webkit-filter:blur(3px);*/
+}
+
+.nav{
+	height: 140px;
+	padding:60px 0;
+	background-color: #eee;
+	text-align: center;
+}
+
+.nav>p{
+	margin:0;
+	padding:20px 0;
+}
+
+.nav>ul{
+	margin:0;
+	padding-left: 0;
+	list-style-type: none;
+}
+.nav>ul>li{
+	display: inline-block;
+	width:150px;
+	height:20px;
+	padding:25px 0;
+}
+.nav>ul>li>a{
+	float:left;
+	width:100%;
+	height:100%;
+	font-size:1.2em;
+	cursor:pointer;
+}
+
+.nav>ul>li>a.shadow{
+	color:transparent;
+	text-shadow:0px 0px 3px #666;
+}
+
+.sec2{
+	position: relative;
+	height:520px;
+	background-color: #aaa;
+}
+
+.sec2>.s-left{
+	float:left;
+	position: relative;
+	width:35%;
+	height:100%;
+	border-right:2px solid #fff;
+}
+
+.sec2>.s-left>.title{
+	position: absolute;
+	top: 100px;
+	right: 20px;
+	margin:0;
+	color:#fff;
+	font-weight: lighter;
+	font-size: 1.5em;
+}
+
+.sec2>.s-right{
+	height:100%;
+	padding-left:35%;
+}
+
+.sec2>.s-right>.content{
+	height:100%;
+	padding-top:100px;
+	padding-left:20px;
+}
+.sec2>.s-right>.content>p{
+	margin-top:0;
+	color:#fff;
+	font-size:1.2em;
+	line-height: 1.5em;
+}
+
+.sec3{
+	height:300px;
+	background-color: #eee;
+}
+
+.sec4{
+	height:520px;
+	background-color: #1abf87;
+}
+
+.sec4>.s-left{
+	float:left;
+	position: relative;
+	width:65%;
+	height:100%;
+	border-right:2px solid #fff;
+}
+
+.sec4>.s-right{
+	height:100%;
+	padding-left:65%;
+}
+
+/*回到顶部*/
+#backtop{
+	display: none;
+	position: fixed;
+	bottom:25px;
+	right:25px;
+	width:50px;
+	height:50px;
+	background: url(images/backtop.png) no-repeat;
+}
+
+#backtop:hover{
+	background-position:0 -50px;
+	cursor:pointer;
+}
