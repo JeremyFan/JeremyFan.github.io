@@ -6,11 +6,11 @@
 		<link rel="stylesheet" href="index.css">
 	</head>
 	<body id="bd">
-		<div class="sec1">
+		<section id="home">
 			<img class="bg" src="images/1f.jpg">
 			<p class="hi">H i，我是 LOHAS 范大喜</p>
-		</div>
-		<nav class="nav">
+		</section>
+		<nav>
 			<img class="arrow" src="images/arrow1.png">
 			<p>L O V E</p>
 			<ul>
@@ -20,7 +20,7 @@
 				<li><a data-href="live">生活</a></li>
 			</ul>
 		</nav>
-		<div id="work" class="sec2">
+		<section id="work">
 			<div class="s-left">
 				<h2 class="title">
 					工 作
@@ -34,8 +34,8 @@
 					<p>喜欢一切好看的东西</p>
 				</div>
 			</div>
-		</div>
-		<div id="music" class="sec3">
+		</section>
+		<section id="music">
 			<img class="arrow" src="images/arrow2.png">
 			<div class="content">
 				<h2 class="title">音 乐</h2>
@@ -45,8 +45,8 @@
 				<p>摇滚至上，Pink Floyd，Radiohead，还有太多的乐队，是我的挚爱</p>
 			</div>
 			<img class="bg" src="images/liam.jpg">
-		</div>
-		<div id="sport" class="sec4">
+		</section>
+		<section id="sport">
 			<div class="s-left">
 				<div class="content">
 					<p>喜欢踢足球</p>
@@ -64,8 +64,8 @@
 					</h2>
 				</div>
 			</div>
-		</div>
-		<div id="live" class="sec5">
+		</section>
+		<section id="live">
 			<img class="arrow" src="images/arrow3.png">
 			<div class="s-left">
 				<h2 class="title">
@@ -85,8 +85,8 @@
 					<p>认真把它们做好</p>
 				</div>
 			</div>
-		</div>
-		<div class="sec6">
+		</section>
+		<section id="more">
 			<div class="content">
 				<h2 class="title">更多</h2>
 				<ul>
@@ -95,7 +95,7 @@
 				</ul>
 			</div>
 			<img class="bg" src="images/back5.jpg">
-		</div>
+		</section>
 		<footer>
 			<img class="arrow" src="images/arrow5.png">
 			<p>build by Jeremy Fan</p>
@@ -127,7 +127,7 @@
 				flyTo('bd');
 			}
 
-			var as=document.querySelectorAll('.nav ul a');
+			var as=document.querySelectorAll('nav ul a');
 			as.onmouseover=function(){
 				alert()
 			}
@@ -184,6 +184,10 @@
 						}
 					},10)
 				}
+			}
+
+			if(console&&console.log){
+				console.log('我的联系方式~  vdx14@126.com / qq 914431567','\n\n三张背景照片：\n\n','第一张拍摄于乌镇\n\n','第二张是英伦摇滚乐队oasis的现场，图片来源于网络\n\n','最后一张拍摄于泰山');
 			}
 		}
 
