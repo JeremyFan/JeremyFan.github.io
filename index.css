@@ -251,6 +251,27 @@ footer p{
 	position: absolute;
 	top:0;
 	left: 50%;
-	width:30px;
+	/*width:30px;*/
+	width:0;
+	height:0;
 	margin-left: -15px;
+	border-style:solid;
+	border-color: transparent;
+	border-width: 18px 14px;
+}
+
+nav .arrow{
+	border-top-color: #000;
+}
+
+#music .arrow{
+	border-top-color: #aaa;
+}
+
+#live .arrow{
+	border-top-color: #9c3;
+}
+
+footer .arrow{
+	border-top-color: #7b9ff3;
 }
