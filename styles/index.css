@@ -1,0 +1,214 @@
+html{
+	font:18px/1.2 'Microsoft YaHei', Arial, Sans-serif;
+}
+
+body{
+	height:100%;
+	margin:0;
+}
+
+.section .title{
+	font-size:1.5em;
+	font-weight: lighter;	
+}
+
+#s1{
+	background-color: #7bc3fd;
+	color:#fff;
+	text-align: center;
+}
+
+#s1 .title{
+	margin-top:5px;
+	font-size:1.4em;
+}
+
+#s2{
+	background-color: #6cc;
+	text-align: center;
+	color:#fff;
+}
+
+#s2 .proficiency-table{
+	margin:50px auto 75px;
+	text-align: right;
+}
+
+#s2 .proficiency-table td{
+	padding:5px;
+}
+
+#s2 .proficiency-bar{
+	width:300px;
+	height:10px;
+	background-color: #6cc;
+}
+
+#s2 .proficiency-bar .proficiency{
+	width:0;
+	height:100%;
+	background-color: #f60;
+	-webkit-transition: width 1.5s ease-in-out;
+	transition: width 1.5s ease-in-out;
+}
+
+#s2 .proficiency-bar .proficiency.htmlcss.show{
+	width:75%;
+}
+#s2 .proficiency-bar .proficiency.js.show{
+	width:75%;
+}
+#s2 .proficiency-bar .proficiency.backend.show{
+	width:50%;
+}
+#s2 .proficiency-bar .proficiency.sql.show{
+	width:25%;
+}
+
+#s2 .browserlist{
+	position: relative;
+	top:2000px;
+	width: 50%;
+	height: 50px;
+	margin:0 auto;
+	padding-left: 0;
+	list-style-type: none;
+	transition:top 2.5s ease-in-out;
+}
+
+#s2 .browserlist.show{
+	top:0;
+}
+
+#s2 .browserlist li{
+	display: inline-block;
+	width:100px;
+	width: 19%;
+	height:50px;
+	transition: transform 1s ease-in-out;
+}
+#s2 .browserlist li:hover{
+	transform: rotate(360deg);
+}
+
+#s2 .browserlist li.chrome{
+	background: center url(../images/chrome.png) no-repeat;
+	background-size: auto 100%;
+}
+#s2 .browserlist li.ie{
+	background: center url(../images/ie.png) no-repeat;
+	background-size: auto 100%;
+}
+#s2 .browserlist li.firefox{
+	background: center url(../images/firefox.png) no-repeat;
+	background-size: auto 100%;
+}
+#s2 .browserlist li.safari{
+	background: center url(../images/safari.png) no-repeat;
+	background-size: auto 100%;
+}
+#s2 .browserlist li.opera{
+	background: center url(../images/opera.png) no-repeat;
+	background-size: auto 100%;
+}
+
+#s3{
+	background:#111 url(../images/liam.jpg) no-repeat;
+	background-size: cover;
+	text-align: center;
+	color:#000;
+}
+
+#s3 .content{
+	position: absolute;
+	top:5%;
+	width:100%;
+}
+
+#s4{
+	background-color: #9c3;
+	color:#fff;
+	text-align: center;
+}
+
+#s5{
+	background-color: #111;
+	color:#fff;
+	text-align: center;
+}
+
+#s5 p{
+	font-size: 1.1em;
+	line-height:1.1em;
+}
+
+#s6{
+	background-color: #f66;
+	color:#fff;
+	text-align: center;
+}
+
+#s7{
+	background: #779aee;
+	background-size: cover;
+	text-align: center;
+	color:#fff;
+}
+
+#s7 .title{
+	margin-bottom: 50px;
+}
+
+#s7 ul{
+	position: relative;
+	top:2000px;
+	margin:0;
+	padding-left: 0;
+	list-style-type: none;
+	transition:top 1s ease;
+}
+#s7 ul.show{
+	top:0;
+}
+
+#s7 ul>li{
+	display:inline-block;
+	margin:0 100px;
+}
+#s7 ul>li>a{
+	float:left;
+	width:100px;
+	height:200px;
+	line-height:3em;
+	text-decoration: none;
+	color:#fff;
+}
+#s7 ul>li>a:hover{
+	color:#333;
+}
+#s7 ul>li>a>img{
+	display:block;
+}
+
+#s7 footer{
+	position: absolute;
+	bottom:0;
+	width: 100%;
+	height:50px;
+	line-height: 60px;
+	background-color: #fff;
+	color:#aaa;
+	font-size:0.7em;
+}
+
+#s7 footer .arrow{
+	position: absolute;
+	top:0;
+	left: 50%;
+	width:0;
+	height:0;
+	margin-left: -15px;
+	border-style:solid;
+	border-color: #779aee transparent transparent;
+	border-width: 18px 14px;
+}
