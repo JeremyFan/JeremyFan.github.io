@@ -2,214 +2,152 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Hi</title>
-		<link rel="stylesheet" href="index.css">
+		<title>Jeremy Fan的个人主页</title>
+		<link href="styles/index.css" rel="stylesheet">
+		<link href="styles/jquery.fullPage.css" rel="stylesheet">
+		<script src="scripts/jquery-2.1.1.min.js"></script>
+		<script src="scripts/jquery-ui.min.js"></script>
+		<script src="scripts/jquery.fullPage.js"></script>
 	</head>
-	<body id="bd">
-		<section id="home">
-			<img class="bg" src="images/1f.jpg">
-			<p class="hi">H i，我是 LOHAS 范大喜</p>
-		</section>
-		<nav>
-			<div class="arrow"></div>
-			<p>L O V E</p>
-			<ul>
-				<li><a data-href="work">工作</a></li>
-				<li><a data-href="music">音乐</a></li>
-				<li><a data-href="sport">运动</a></li>
-				<li><a data-href="live">生活</a></li>
-			</ul>
-		</nav>
-		<section id="work">
-			<div class="s-left">
+	<body>
+		<div id="fullpage">
+			<div class="section" data-anchor="section1" id="s1">
+				<img src="images/head.jpg" width="150">
 				<h2 class="title">
-					工 作
+					Hi, 我是 LOHAS 范大喜<br>I'm in love with Beijing
 				</h2>
 			</div>
-			<div class="s-right">
+			<div class="section" data-anchor="section2" id="s2">
 				<div class="content">
-					<p>我是一名前端工程师</p>
-					<p>写很多 HTML & CSS & JavaScript</p>
-					<p>写很少 .net / C# & SQL</p>
-					<p>喜欢一切好看的东西</p>
+					<h2 class="title">我是一只前端工程师，喜欢一切好看的东西</h2>
+					<table class="proficiency-table">
+						<tbody>
+							<tr>
+								<td>html & css</td>
+								<td>
+									<div class="proficiency-bar">
+										<div class="proficiency htmlcss"></div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>javascript</td>
+								<td>
+									<div class="proficiency-bar">
+										<div class="proficiency js"></div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>.net</td>
+								<td>
+									<div class="proficiency-bar">
+										<div class="proficiency backend"></div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>SQL</td>
+								<td>
+									<div class="proficiency-bar">
+										<div class="proficiency sql"></div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<ol class="browserlist">
+						<li class="chrome"></li>
+						<li class="ie"></li>
+						<li class="firefox"></li>
+						<li class="safari"></li>
+						<li class="opera"></li>
+					</ol>
 				</div>
 			</div>
-		</section>
-		<section id="music">
-			<div class="arrow"></div>
-			<div class="content">
-				<h2 class="title">音 乐</h2>
-				<p>听流行，觉得 陈奕迅 是很用心的歌手</p>
-				<p>也喜欢 Maksim 的钢琴曲，喜欢 B.B.King 的布鲁斯</p>
-				<p>但 ... My heart is rock</p>
-				<p>摇滚至上，Pink Floyd，Radiohead，还有太多的乐队，是我的挚爱</p>
-			</div>
-			<img class="bg" src="images/liam.jpg">
-		</section>
-		<section id="sport">
-			<div class="s-left">
+			<div class="section" data-anchor="section3" id="s3">
 				<div class="content">
-					<p>喜欢踢足球</p>
-					<p>踢了很多年，可惜身体素质一般般，不然 ...</p>
-					<p>喜欢跑步</p>
+					<h2 class="title">喜欢摇滚乐</h2>
+					<p>Pink Floyd, Radiohead, Oasis, the Doors...</p>
+					<p>还有太多太多的乐队，都是我的挚爱</p>
+				</div>
+			</div>
+			<div class="section" data-anchor="section4" id="s4">
+				<div class="slide">
+					<h2 class="title">喜欢踢足球</h2>
+					<p>踢了很多年，可惜身体素质一般般，不然 . . . </p>
+				</div>
+				<div class="slide">
+					<h2 class="title">喜欢跑步</h2>
 					<p>可是来到北京后，感觉跑步的机会少了</p>
 					<p>因为空气质量很少在100以下</p>
-					<p>目前在有计划的健身</p>
+				</div>
+				<div class="slide">
+					<h2 class="title">目前在有计划的健身</h2>
 				</div>
 			</div>
-			<div class="s-right">
-				<div class="s-right-c">
-					<h2 class="title">
-						运 动
-					</h2>
+			<div class="section" data-anchor="section5" id="s5">
+				<div class="slide">
+					<p>『 听过很多大道理，可依旧过不好我的生活 』</p>
 				</div>
-			</div>
-		</section>
-		<section id="live">
-			<div class="arrow"></div>
-			<div class="s-left">
-				<h2 class="title">
-					生 活
-				</h2>
-			</div>
-			<div class="s-right">
-				<div class="content">
+				<div class="slide">
 					<p>大多数事情很随和，但其实执念很重</p>
-					<p>放松状态下很好玩，可是容易紧张</p>
-					<p>工作之外</p>
-					<p>上网会逛逛微博，知乎</p>
-					<p>喜欢听故事。音乐，书，电影里有故事，所以我喜欢它们</p>
-					<p>我会用Evernote记录我的思考，想法和总结</p>
-					<p>有时会拍一些照片，最近在练琴</p>
+					<p>放松状态下很好玩，但是容易紧张</p>
+				</div>
+				<div class="slide">
+					<p>喜欢听故事。我会用 Evernote 记录我的思考，想法和总结</p>
+					<p>有时会拍一些照片</p>
+				</div>
+				<div class="slide">
 					<p>我觉得人要去寻找自己最喜欢的一两件事情</p>
 					<p>认真把它们做好</p>
 				</div>
+				<div class="slide">
+					<p>「 5 」 「 14 」 「 15 」 「 23 」</p>
+				</div>
 			</div>
-		</section>
-		<section id="more">
-			<div class="content">
-				<h2 class="title">更多</h2>
+
+			<div class="section" data-anchor="section7" id="s7">
+				<h2 class="title">Contact</h2>
 				<ul>
 					<li><a target="_blank" href="http://weibo.com/u/2011413844"><img width="100" src="images/icon.weibo2.png">我的微博</a></li>
 					<li><a target="_blank" href="https://github.com/JeremyFan"><img width="100" src="images/icon.github1.png">我的GitHub</a></li>
 				</ul>
+				<footer>
+					<span class="arrow"></span>
+					build by Jeremy Fan
+				</footer>
 			</div>
-			<img class="bg" src="images/back5.jpg">
-		</section>
-		<footer>
-			<div class="arrow"></div>
-			<p>build by Jeremy Fan</p>
-		</footer>
-		<a id="backtop"></a>
+		</div>
+
+		<script>
+			$(function(){
+				$('#fullpage').fullpage({
+					css3:true,
+					slidesNavigation:true,
+					navigation: true,
+					navigationPosition: 'right',
+					navigationTooltips: ['我是范大喜', '工作', '音乐', '运动', '生活', '联系我'],
+					anchors: ['section1', 'section2', 'section3', 'section4', 'section5', 'section7'],
+					afterLoad:function(anchorLink,index){
+						var $proficiency,
+							$browserlist,
+							$contactlist;
+						if(anchorLink==='section2'){
+							$proficiency = $('#s2 .proficiency');
+							$proficiency.addClass('show');
+
+							$browserlist = $('#s2 .browserlist');
+							$browserlist.addClass('show');
+						}
+
+						if(anchorLink==='section7'){
+							$contactlist=$('#s7 ul');
+							$contactlist.addClass('show');
+						}
+					}
+				});
+			})
+		</script>
 	</body>
-	<script>
-		window.onload=function(){
-			var backTop=document.getElementById('backtop'),
-				clientHeight=document.documentElement.clientHeight,
-				timer,	// 定时器
-				inFly = false;	// 是否在飞行中
-			window.onscroll=function(){
-				var top= getScrollTop();
-				if(top>clientHeight){
-					backtop.style.display='block';
-				}
-				else{
-					backtop.style.display='none';
-				}
-
-				// if(inFly){
-				// 	clearInterval(timer);				
-				// }
-				// inFly=true;
-			}
-
-			backtop.onclick=function(){
-				flyTo('bd');
-			}
-
-			var as=document.querySelectorAll('nav ul a');
-			as.onmouseover=function(){
-				alert()
-			}
-
-			for(var i=0;i<as.length;i++){
-				var a=as[i];
-				a.onmouseover=function(){
-					for(var j=0;j<as.length;j++){
-						as[j].className='shadow';
-					}
-					this.className='';
-				};
-				a.onmouseout=function(){
-					for(var j=0;j<as.length;j++){
-						as[j].className='';
-					}
-				}
-				a.onclick=function(){
-					// debugger
-					flyTo(this.attributes['data-href'].value);
-				}
-			}
-
-			/// 飞到指定地方
-			function flyTo(eleId){
-				var ele=document.getElementById(eleId),
-					top=getElementOffsetTop(ele),
-					currentTop=getScrollTop(),
-					isDown=top>currentTop,	// 是否是向下滚动 
-					s; // 每次移动距离
-
-				if(isDown){
-					timer=setInterval(function(){
-						// debugger
-						currentTop=getScrollTop();
-						s=Math.ceil((top-currentTop)/15);
-						setScrollTop(currentTop+s);
-
-						// inFly=false;
-						if(top<=currentTop){
-							clearInterval(timer);
-						}
-					},10)
-				}
-				else{
-					timer=setInterval(function(){
-						currentTop=getScrollTop();
-						s=Math.floor((top-currentTop)/15);
-						setScrollTop(currentTop+s);
-
-						// inFly=false;
-						if(currentTop<=top){
-							clearInterval(timer);
-						}
-					},10)
-				}
-			}
-
-			if(console&&console.log){
-				console.log('我的联系方式~  vdx14@126.com / qq 914431567','\n\n三张背景照片：\n\n','第一张拍摄于乌镇\n\n','第二张是英伦摇滚乐队oasis的现场，图片来源于网络\n\n','最后一张拍摄于泰山');
-			}
-		}
-
-		// 获取元素Offset Top
-		function getElementOffsetTop(ele){
-			var actualTop=ele.offsetTop,
-				current=ele.offsetParent;
-			while(current!==null){
-				actualTop+=current.offsetTop;
-				current=current.offsetParent;
-			}
-			return actualTop;
-		}
-
-		/// 获取当前滚动高度
-		function getScrollTop(){
-			return document.body.scrollTop || document.documentElement.scrollTop;
-		}
-
-		function setScrollTop(top){
-			document.body.scrollTop=document.documentElement.scrollTop=top;
-		}
-
-	</script>
 </html>
