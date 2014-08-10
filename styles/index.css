@@ -49,8 +49,8 @@ body{
 	width:0;
 	height:100%;
 	background-color: #f60;
-	-webkit-transition: width 1.5s ease-in-out;
 	transition: width 1.5s ease-in-out;
+	-webkit-transition: width 1.5s ease-in-out;
 }
 
 #wrok .proficiency-bar .proficiency.htmlcss.show{
@@ -75,6 +75,7 @@ body{
 	padding-left: 0;
 	list-style-type: none;
 	transition:top 2.5s ease-in-out;
+	-webkit-transition:top 2.5s ease-in-out;
 }
 
 #wrok .browserlist.show{
@@ -93,9 +94,11 @@ body{
 	max-width: 50px;
 	height:50px;
 	transition: transform 1s ease-in-out;
+	-webkit-transition: transform 1s ease-in-out;
 }
 #wrok .browserlist li span:hover{
 	transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
 }
 
 #wrok .browserlist li.chrome span{
@@ -184,6 +187,7 @@ body{
 	padding-left: 0;
 	list-style-type: none;
 	transition:top 1s ease;
+	-webkit-transition:top 1s ease;
 }
 #contact ul.show{
 	top:0;
