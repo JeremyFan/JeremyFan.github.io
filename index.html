@@ -5,19 +5,16 @@
 		<title>Jeremy Fan的个人主页</title>
 		<link href="styles/index.css" rel="stylesheet">
 		<link href="styles/jquery.fullPage.css" rel="stylesheet">
-		<script src="scripts/jquery-2.1.1.min.js"></script>
-		<script src="scripts/jquery-ui.min.js"></script>
-		<script src="scripts/jquery.fullPage.js"></script>
 	</head>
 	<body>
 		<div id="fullpage">
-			<div class="section" data-anchor="section1" id="s1">
-				<img src="images/head.jpg" width="150">
+			<div class="section" data-anchor="section-hi" id="hi">
+				<img src="images/head5.jpg" alt="范大喜">
 				<h2 class="title">
 					Hi, 我是 LOHAS 范大喜<br>I'm in love with Beijing
 				</h2>
 			</div>
-			<div class="section" data-anchor="section2" id="s2">
+			<div class="section" data-anchor="section-work" id="wrok">
 				<div class="content">
 					<h2 class="title">我是一只前端工程师，喜欢一切好看的东西</h2>
 					<table class="proficiency-table">
@@ -57,22 +54,15 @@
 						</tbody>
 					</table>
 					<ol class="browserlist">
-						<li class="chrome"></li>
-						<li class="ie"></li>
-						<li class="firefox"></li>
-						<li class="safari"></li>
-						<li class="opera"></li>
+						<li class="chrome"><span></span></li>
+						<li class="ie"><span></span></li>
+						<li class="firefox"><span></span></li>
+						<li class="safari"><span></span></li>
+						<li class="opera"><span></span></li>
 					</ol>
 				</div>
 			</div>
-			<div class="section" data-anchor="section3" id="s3">
-				<div class="content">
-					<h2 class="title">喜欢摇滚乐</h2>
-					<p>Pink Floyd, Radiohead, Oasis, the Doors...</p>
-					<p>还有太多太多的乐队，都是我的挚爱</p>
-				</div>
-			</div>
-			<div class="section" data-anchor="section4" id="s4">
+			<div class="section" data-anchor="section-sport" id="sport">
 				<div class="slide">
 					<h2 class="title">喜欢踢足球</h2>
 					<p>踢了很多年，可惜身体素质一般般，不然 . . . </p>
@@ -83,10 +73,27 @@
 					<p>因为空气质量很少在100以下</p>
 				</div>
 				<div class="slide">
-					<h2 class="title">目前在有计划的健身</h2>
+					<p>目前在有计划的健身</p>
 				</div>
 			</div>
-			<div class="section" data-anchor="section5" id="s5">
+			<div class="section" data-anchor="section-music" id="music">
+				<div class="slide rock">
+					<h2 class="title">喜欢摇滚乐</h2>
+					<p>Pink Floyd, Radiohead, Oasis, the Doors...</p>
+					<p>还有太多太多的乐队，都是我的挚爱</p>
+				</div>
+				<div class="slide pop">
+					<h2 class="title">接受流行乐和其他风格</h2>
+					<p>听陈奕迅，听 B.B.King，听 Maksim</p>
+					<p>喜欢用心的歌手</p>
+				</div>
+				<div class="slide me">
+					<h2 class="title">最近在学琴</h2>
+					<p>希望有一天</p>
+					<p>也能用音乐表达自己</p>
+				</div>
+			</div>
+			<div class="section" data-anchor="section-live" id="live">
 				<div class="slide">
 					<p>『 听过很多大道理，可依旧过不好我的生活 』</p>
 				</div>
@@ -99,19 +106,18 @@
 					<p>有时会拍一些照片</p>
 				</div>
 				<div class="slide">
+					<p>「 5 」 「 14 」 「 15 」 「 23 」</p>
+				</div>
+				<div class="slide">
 					<p>我觉得人要去寻找自己最喜欢的一两件事情</p>
 					<p>认真把它们做好</p>
 				</div>
-				<div class="slide">
-					<p>「 5 」 「 14 」 「 15 」 「 23 」</p>
-				</div>
 			</div>
-
-			<div class="section" data-anchor="section7" id="s7">
+			<div class="section" data-anchor="section-contact" id="contact">
 				<h2 class="title">Contact</h2>
 				<ul>
-					<li><a target="_blank" href="http://weibo.com/u/2011413844"><img width="100" src="images/icon.weibo2.png">我的微博</a></li>
-					<li><a target="_blank" href="https://github.com/JeremyFan"><img width="100" src="images/icon.github1.png">我的GitHub</a></li>
+					<li><a target="_blank" href="http://weibo.com/u/2011413844"><img src="images/icon.weibo5.png" alt="微博">我的微博</a></li>
+					<li><a target="_blank" href="https://github.com/JeremyFan"><img src="images/icon.github5.png" alt="GitHub">我的GitHub</a></li>
 				</ul>
 				<footer>
 					<span class="arrow"></span>
@@ -119,34 +125,42 @@
 				</footer>
 			</div>
 		</div>
-
+		
+		<script src="scripts/jquery-2.1.1.min.js"></script>
+		<script src="scripts/jquery-ui.min.js"></script>
+		<script src="scripts/jquery.fullPage.js"></script>
 		<script>
 			$(function(){
 				$('#fullpage').fullpage({
+					resize:false,
 					css3:true,
 					slidesNavigation:true,
 					navigation: true,
 					navigationPosition: 'right',
-					navigationTooltips: ['我是范大喜', '工作', '音乐', '运动', '生活', '联系我'],
-					anchors: ['section1', 'section2', 'section3', 'section4', 'section5', 'section7'],
+					navigationTooltips: ['Hi', '工作', '运动', '音乐', '生活', '联系我'],
+					anchors: ['section-hi', 'section-work', 'section-sport', 'section-music', 'section-live', 'section-contact'],
 					afterLoad:function(anchorLink,index){
 						var $proficiency,
 							$browserlist,
 							$contactlist;
-						if(anchorLink==='section2'){
-							$proficiency = $('#s2 .proficiency');
+						if(anchorLink==='section-work'){
+							$proficiency = $('#wrok .proficiency');
 							$proficiency.addClass('show');
 
-							$browserlist = $('#s2 .browserlist');
+							$browserlist = $('#wrok .browserlist');
 							$browserlist.addClass('show');
 						}
 
-						if(anchorLink==='section7'){
-							$contactlist=$('#s7 ul');
+						if(anchorLink==='section-contact'){
+							$contactlist=$('#contact ul');
 							$contactlist.addClass('show');
 						}
 					}
 				});
+
+				if(console&&console.log){
+					console.log('音乐部分的背景图：','\n\n\t第一张是oasis主唱Liam','\n\n\t第二张是陈奕迅','\n\n\t第三张是万能青年旅店乐队主唱&吉他董亚千');
+				}
 			})
 		</script>
 	</body>

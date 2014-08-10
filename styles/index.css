@@ -9,42 +9,43 @@ body{
 
 .section .title{
 	font-size:1.5em;
+	line-height:1.5em;
 	font-weight: lighter;	
 }
 
-#s1{
+#hi{
 	background-color: #7bc3fd;
 	color:#fff;
 	text-align: center;
 }
 
-#s1 .title{
+#hi .title{
 	margin-top:5px;
 	font-size:1.4em;
 }
 
-#s2{
+#wrok{
 	background-color: #6cc;
 	text-align: center;
 	color:#fff;
 }
 
-#s2 .proficiency-table{
+#wrok .proficiency-table{
 	margin:50px auto 75px;
 	text-align: right;
 }
 
-#s2 .proficiency-table td{
+#wrok .proficiency-table td{
 	padding:5px;
 }
 
-#s2 .proficiency-bar{
+#wrok .proficiency-bar{
 	width:300px;
 	height:10px;
 	background-color: #6cc;
 }
 
-#s2 .proficiency-bar .proficiency{
+#wrok .proficiency-bar .proficiency{
 	width:0;
 	height:100%;
 	background-color: #f60;
@@ -52,20 +53,20 @@ body{
 	transition: width 1.5s ease-in-out;
 }
 
-#s2 .proficiency-bar .proficiency.htmlcss.show{
+#wrok .proficiency-bar .proficiency.htmlcss.show{
 	width:75%;
 }
-#s2 .proficiency-bar .proficiency.js.show{
+#wrok .proficiency-bar .proficiency.js.show{
 	width:75%;
 }
-#s2 .proficiency-bar .proficiency.backend.show{
+#wrok .proficiency-bar .proficiency.backend.show{
 	width:50%;
 }
-#s2 .proficiency-bar .proficiency.sql.show{
+#wrok .proficiency-bar .proficiency.sql.show{
 	width:25%;
 }
 
-#s2 .browserlist{
+#wrok .browserlist{
 	position: relative;
 	top:2000px;
 	width: 50%;
@@ -76,90 +77,107 @@ body{
 	transition:top 2.5s ease-in-out;
 }
 
-#s2 .browserlist.show{
+#wrok .browserlist.show{
 	top:0;
 }
 
-#s2 .browserlist li{
+#wrok .browserlist li{
+	float:left;
+	width: 19.9%;
+}
+
+#wrok .browserlist li span{
+	/*float:left;*/
 	display: inline-block;
-	width:100px;
-	width: 19%;
+	width:100%;
+	max-width: 50px;
 	height:50px;
 	transition: transform 1s ease-in-out;
 }
-#s2 .browserlist li:hover{
+#wrok .browserlist li span:hover{
 	transform: rotate(360deg);
 }
 
-#s2 .browserlist li.chrome{
+#wrok .browserlist li.chrome span{
 	background: center url(../images/chrome.png) no-repeat;
-	background-size: auto 100%;
+	/*background-size: auto 100%;*/
+	background-size: 100%;
 }
-#s2 .browserlist li.ie{
+#wrok .browserlist li.ie span{
 	background: center url(../images/ie.png) no-repeat;
-	background-size: auto 100%;
+	/*background-size: auto 100%;*/
+	background-size: 100%;
 }
-#s2 .browserlist li.firefox{
+#wrok .browserlist li.firefox span{
 	background: center url(../images/firefox.png) no-repeat;
-	background-size: auto 100%;
+	/*background-size: auto 100%;*/
+	background-size: 100%;
 }
-#s2 .browserlist li.safari{
+#wrok .browserlist li.safari span{
 	background: center url(../images/safari.png) no-repeat;
-	background-size: auto 100%;
+	/*background-size: auto 100%;*/
+	background-size: 100%;
 }
-#s2 .browserlist li.opera{
+#wrok .browserlist li.opera span{
 	background: center url(../images/opera.png) no-repeat;
-	background-size: auto 100%;
+	/*background-size: auto 100%;*/
+	background-size: 100%;
 }
 
-#s3{
-	background:#111 url(../images/liam.jpg) no-repeat;
-	background-size: cover;
-	text-align: center;
-	color:#000;
-}
-
-#s3 .content{
-	position: absolute;
-	top:5%;
-	width:100%;
-}
-
-#s4{
+#sport{
 	background-color: #9c3;
 	color:#fff;
 	text-align: center;
 }
 
-#s5{
+#music{
+	color:#000;
+}
+
+#music .rock{
+	background: #111 url(../images/liam.jpg) no-repeat;
+	background-size: cover;
+}
+#music .rock .content{
+	position: absolute;
+	top:5%;
+	left:0;
+	width:100%;
+}
+#music .pop{
+	background: #111 url(../images/eason.jpg) no-repeat;
+	background-size: cover;
+	color:#fff;
+}
+#music .me{
+	background: #111 url(../images/d2000.jpg) no-repeat;
+	background-size: cover;
+	color:#fff;
+}
+
+#live{
 	background-color: #111;
 	color:#fff;
 	text-align: center;
 }
 
-#s5 p{
+#live p{
 	font-size: 1.1em;
 	line-height:1.1em;
 }
 
-#s6{
-	background-color: #f66;
-	color:#fff;
-	text-align: center;
-}
-
-#s7{
+#contact{
 	background: #779aee;
 	background-size: cover;
 	text-align: center;
 	color:#fff;
 }
 
-#s7 .title{
+#contact .title{
 	margin-bottom: 50px;
 }
 
-#s7 ul{
+#contact ul{
 	position: relative;
 	top:2000px;
 	margin:0;
@@ -167,15 +185,15 @@ body{
 	list-style-type: none;
 	transition:top 1s ease;
 }
-#s7 ul.show{
+#contact ul.show{
 	top:0;
 }
 
-#s7 ul>li{
+#contact ul>li{
 	display:inline-block;
 	margin:0 100px;
 }
-#s7 ul>li>a{
+#contact ul>li>a{
 	float:left;
 	width:100px;
 	height:200px;
@@ -183,14 +201,14 @@ body{
 	text-decoration: none;
 	color:#fff;
 }
-#s7 ul>li>a:hover{
+#contact ul>li>a:hover{
 	color:#333;
 }
-#s7 ul>li>a>img{
+#contact ul>li>a>img{
 	display:block;
 }
 
-#s7 footer{
+#contact footer{
 	position: absolute;
 	bottom:0;
 	width: 100%;
@@ -201,7 +219,7 @@ body{
 	font-size:0.7em;
 }
 
-#s7 footer .arrow{
+#contact footer .arrow{
 	position: absolute;
 	top:0;
 	left: 50%;
