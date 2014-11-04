@@ -163,5 +163,15 @@
 				}
 			})
 		</script>
+
+		<!--测试用-->
+		<iframe id="b_iframe"  width="100%"  src="http://x.fx-dev.com/group/ifeng/agent" style="display:none">  
+		</iframe>   
+		    <script>     
+		    var b_height = Math.max(document.body.scrollHeight,document.body.clientHeight);     
+		    var b_iframe = document.getElementById("b_iframe");     
+		    // b_iframe.src =  b_iframe.src+"#"+b_height;  
+		    b_iframe.src+='#'+b_height;
+		    </script>
 	</body>
 </html>
