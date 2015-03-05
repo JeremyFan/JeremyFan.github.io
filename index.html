@@ -9,12 +9,10 @@
 	<body>
 		<div id="fullpage">
 			<div class="section" data-anchor="section-hi" id="hi">
-				<img src="images/head5.jpg" alt="范大喜">
-				<h2 class="title">
-					Hi, 我是 LOHAS 范大喜<br>I'm in love with Beijing
-				</h2>
+				<div class="hi-wrapper">
+				</div>
 			</div>
-			<div class="section" data-anchor="section-work" id="wrok">
+			<div class="section hidden" data-anchor="section-work" id="wrok">
 				<div class="content">
 					<h2 class="title">我是一只前端工程师，喜欢一切好看的东西</h2>
 					<table class="proficiency-table">
@@ -62,7 +60,7 @@
 					</ol>
 				</div>
 			</div>
-			<div class="section" data-anchor="section-sport" id="sport">
+			<div class="section hidden" data-anchor="section-sport" id="sport">
 				<div class="slide">
 					<h2 class="title">喜欢踢足球</h2>
 					<p>踢了很多年，可惜身体素质一般般，不然 . . . </p>
@@ -76,7 +74,7 @@
 					<p>目前在有计划的健身</p>
 				</div>
 			</div>
-			<div class="section" data-anchor="section-music" id="music">
+			<div class="section hidden" data-anchor="section-music" id="music">
 				<div class="slide rock">
 					<h2 class="title">喜欢摇滚乐</h2>
 					<p>Pink Floyd, Radiohead, Oasis, the Doors...</p>
@@ -93,7 +91,7 @@
 					<p>也能用音乐表达自己</p>
 				</div>
 			</div>
-			<div class="section" data-anchor="section-live" id="live">
+			<div class="section hidden" data-anchor="section-live" id="live">
 				<div class="slide">
 					<p>『 听过很多大道理，可依旧过不好我的生活 』</p>
 				</div>
@@ -113,7 +111,7 @@
 					<p>认真把它们做好</p>
 				</div>
 			</div>
-			<div class="section" data-anchor="section-contact" id="contact">
+			<div class="section hidden" data-anchor="section-contact" id="contact">
 				<h2 class="title">Contact</h2>
 				<ul>
 					<li><a target="_blank" href="http://weibo.com/u/2011413844"><img src="images/icon.weibo5.png" alt="微博">我的微博</a></li>
@@ -125,6 +123,7 @@
 				</footer>
 			</div>
 		</div>
+
 		
 		<script src="scripts/jquery-2.1.1.min.js"></script>
 		<script src="scripts/jquery-ui.min.js"></script>
@@ -139,10 +138,21 @@
 					navigationPosition: 'right',
 					navigationTooltips: ['Hi', '工作', '运动', '音乐', '生活', '联系我'],
 					anchors: ['section-hi', 'section-work', 'section-sport', 'section-music', 'section-live', 'section-contact'],
+					afterRender:function(){
+						var $template=$($('#template').html()),
+							$wrapper=$('#hi .hi-wrapper');
+						$wrapper.append($template);
+						$template.filter('img').on('load',function(){
+							$wrapper.animate({'opacity':'1'},1000);
+						})
+						$('.section').removeClass('hidden');
+					},
+
 					afterLoad:function(anchorLink,index){
 						var $proficiency,
 							$browserlist,
 							$contactlist;
+
 						if(anchorLink==='section-work'){
 							$proficiency = $('#wrok .proficiency');
 							$proficiency.addClass('show');
@@ -163,5 +173,13 @@
 				}
 			})
 		</script>
+
+		<script type="text/html" id="template">
+				<img src="images/head5.jpg" alt="范大喜"></img>
+				<h2 class="title">
+					Hi, 我是 LOHAS 范大喜<br>I'm in love with Beijing
+				</h2>
+		</script>
+
 	</body>
 </html>

@@ -7,6 +7,10 @@ body{
 	margin:0;
 }
 
+.section.hidden{
+	display:none !important;
+}
+
 .section .title{
 	font-size:1.5em;
 	line-height:1.5em;
@@ -17,6 +21,11 @@ body{
 	background-color: #7bc3fd;
 	color:#fff;
 	text-align: center;
+}
+
+.hi-wrapper{
+	height:233px;
+	opacity: 0;
 }
 
 #hi .title{
