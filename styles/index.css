@@ -49,7 +49,7 @@ body{
 }
 
 #wrok .proficiency-bar{
-	width:300px;
+	width:200px;
 	height:10px;
 	background-color: #6cc;
 }
@@ -63,32 +63,35 @@ body{
 }
 
 #wrok .proficiency-bar .proficiency.htmlcss.show{
-	width:75%;
+	width:100%;
 }
 #wrok .proficiency-bar .proficiency.js.show{
-	width:75%;
+	width:100%;
 }
 #wrok .proficiency-bar .proficiency.backend.show{
-	width:50%;
+	width:55%;
 }
 #wrok .proficiency-bar .proficiency.sql.show{
 	width:25%;
 }
 
 #wrok .browserlist{
-	position: relative;
-	top:2000px;
+	/*position: relative;*/
+	/*top:2000px;*/
 	width: 50%;
 	height: 50px;
 	margin:0 auto;
 	padding-left: 0;
 	list-style-type: none;
-	transition:top 2.5s ease-in-out;
-	-webkit-transition:top 2.5s ease-in-out;
+	transform:translate3d(0,2000px,0);
+	-webkit-transform:translate3d(0,2000px,0);
+	transition:-webkit-transform 2.5s ease-in-out;
+	-webkit-transition:-webkit-transform 2.5s ease-in-out;
 }
 
 #wrok .browserlist.show{
-	top:0;
+	transform:translate3d(0,0,0);
+	-webkit-transform:translate3d(0,0,0);
 }
 
 #wrok .browserlist li{
@@ -190,16 +193,9 @@ body{
 }
 
 #contact ul{
-	position: relative;
-	top:2000px;
 	margin:0;
 	padding-left: 0;
 	list-style-type: none;
-	transition:top 1s ease;
-	-webkit-transition:top 1s ease;
-}
-#contact ul.show{
-	top:0;
 }
 
 #contact ul>li{
@@ -243,4 +239,15 @@ body{
 	border-style:solid;
 	border-color: #779aee transparent transparent;
 	border-width: 18px 14px;
+}
+
+@media screen and (max-width: 480px) {
+	#wrok .proficiency-bar{
+		width:110px;
+	}
+}
+@media screen and (max-width: 640px) {
+	#wrok .browserlist{
+		width:90%;
+	}
 }
