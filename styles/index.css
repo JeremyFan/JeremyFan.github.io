@@ -11,6 +11,17 @@ body{
 	display:none !important;
 }
 
+#sport .fp-slide{
+	box-sizing:border-box;
+	padding:0 50px;
+}
+.fp-slidesNav{
+	width:100%;
+	left:0 !important;
+	margin:0 !important;
+	text-align: center;
+}
+
 .section .title{
 	font-size:1.5em;
 	line-height:1.5em;
@@ -85,8 +96,8 @@ body{
 	list-style-type: none;
 	transform:translate3d(0,2000px,0);
 	-webkit-transform:translate3d(0,2000px,0);
-	transition:-webkit-transform 2.5s ease-in-out;
-	-webkit-transition:-webkit-transform 2.5s ease-in-out;
+	transition:-webkit-transform 1.5s ease-in-out;
+	-webkit-transition:-webkit-transform 1.5s ease-in-out;
 }
 
 #wrok .browserlist.show{
