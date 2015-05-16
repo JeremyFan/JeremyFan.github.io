@@ -262,3 +262,22 @@ body{
 		width:90%;
 	}
 }
+
+
+.fp-controlArrow{
+    position: absolute;
+    top:0;
+    z-index: 9;
+    width:25%; 
+    height:100%;
+}
+
+.fp-controlArrow.fp-prev {
+    left:0;
+    cursor: url(../images/cursor-left.cur), pointer;
+}
+
+.fp-controlArrow.fp-next {
+    right:100px;
+    cursor: url(../images/cursor-right.cur), pointer;
+}
