@@ -1,16 +1,14 @@
----
-layout: default
-title: Jeremy's blog
----
-<h2>
-	Newest posts
-</h2>
-<ul class="articlelist">
-{% for post in site.posts %}
-<li>
-	<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-	<span class="time">Post on <time>{{ post.date | date_to_string }} </time></span>
-</li>
-　　　　{% endfor %}
-</ul>
-
+<!doctype html>
+<html>
+<head>
+	<title>Hi</title>
+	<style>
+		body{background:#272822;color:#fff;}
+		em{font-style:normal;color:#fd971f;}
+	</style>
+</head>
+<body>
+	<p>Hi, this is <em>Jeremy Fan</em>'s playground.</p>
+	<p>Welcome.</p>
+</body>
+</html>
