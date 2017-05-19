@@ -19,8 +19,8 @@ gulp.task('script-pub', () => {
 
 gulp.task('stylus', () => {
   gulp.src('./styles/*.styl')
-    .pipe(concat('index.css'))
     .pipe(stylus())
+    .pipe(concat('index.css'))
     .pipe(gulp.dest('./dist'))
 })
 
