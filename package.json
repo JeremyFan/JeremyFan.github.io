@@ -1,0 +1,28 @@
+{
+  "name": "jeremyfan.name",
+  "version": "2017.0.0",
+  "description": "personal website of Jeremy Fan",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JeremyFan/JeremyFan.github.io.git"
+  },
+  "keywords": [
+    "static",
+    "canvas",
+    "responsive",
+    "particlesjs",
+    "stylus"
+  ],
+  "author": "Jeremy Fan <jeremyfan_14@live.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JeremyFan/JeremyFan.github.io/issues"
+  },
+  "homepage": "https://github.com/JeremyFan/JeremyFan.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-stylus": "^2.6.0",
+    "gulp-uglify": "^2.1.2"
+  }
+}
