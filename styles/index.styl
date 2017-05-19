@@ -1,5 +1,60 @@
+@font-face{
+  font-family 'lombok'
+  src url('../public/font/Lombok.otf') format('truetype')
+  font-style normal
+  font-weight normal
+}
+
+html
+  height 100%
 body
+  height 100%
+  font 16px/1 Helvetica, arial, sans-serif
   background #000
 
-app
-  font-size 14px
+body,h1,h2,h3,h4,h5,h6,p
+  margin 0
+  
+a,a:active,a:link,a:visited
+  color #fff
+  text-decoration none
+  outline none
+
+#particles-js
+  position absolute
+  width 100%
+  height 100%
+  overflow hidden
+  z-index 0
+  
+.sec-1
+  display flex
+  justify-content center
+  align-items center
+  height 100%
+  margin 0 auto
+  text-align center
+  color #fff
+  
+  .content
+    z-index 1
+    font-weight 100
+    text-transform uppercase
+  
+    h1
+      margin-bottom .5em
+      font 2.25em 'lombok', Helvetica, arial, sans-serif
+    p
+      margin-bottom 1em
+      font-size 1.2em
+      letter-spacing 2px
+      
+    a
+      display block
+      line-height 2
+      letter-spacing 2px
+      transition all .2s
+      &:hover
+        color #f99
+      
+      

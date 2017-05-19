@@ -1,1 +1,3 @@
-console.log('hii')
+window.onload = function() {
+  particlesJS.load('particles-js')
+}
