@@ -1,7 +1,22 @@
 window.onload = function() {
-  particlesJS.load('particles-js');
+  particlesJS.load('particles-js',function(){
+    showEl('particles-js');
+  });
+}
 
+var fontLoader = new FontLoader(['lombok'],{
+  fontLoaded: function(font){
+    showEl('jf');
+    console.log("font loaded: " + font.family);
+  }
+}, 3000);
+fontLoader.loadFonts();
 
+function showEl(id){
+  var el = document.getElementById(id);
+  if(el){
+    el.style.opacity = 1;
+  }
 }
 
 var inAnimation = false
