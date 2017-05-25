@@ -7,9 +7,9 @@
 
 html
   height 100%
+  font 625%/1 Helvetica, arial, sans-serif
 body
   height 100%
-  font 16px/1 Helvetica, arial, sans-serif
   background #000
   overflow hidden
 
@@ -42,6 +42,7 @@ a,a:active,a:link,a:visited
 .sec-1
 .sec-2
   display flex
+  overflow hidden
   justify-content center
   align-items center
   height 100%
@@ -57,15 +58,15 @@ a,a:active,a:link,a:visited
     text-transform uppercase
   
     h1
-      margin-bottom .5em
+      margin-bottom .18rem
       transition all 1.5s
-      font 2.25em 'lombok', Helvetica, arial, sans-serif
+      font .36rem 'lombok', Helvetica, arial, sans-serif
       line-height 1
       opacity 0
     h2
-      margin-bottom 1em
-      font-size 1.4em
-      letter-spacing 2.5px
+      margin-bottom .22rem
+      font-size .22rem
+      letter-spacing .025rem
       em
         position relative
         span
@@ -80,7 +81,8 @@ a,a:active,a:link,a:visited
     a
       display block
       line-height 2
-      letter-spacing 2px
+      letter-spacing .02rem
+      font-size .16rem
       transition all .2s
       &:hover
         color #f99
@@ -88,13 +90,14 @@ a,a:active,a:link,a:visited
 .sec-2
   .content
     text-transform uppercase
-    letter-spacing 2px
+    letter-spacing .02rem
     p
-      margin-bottom 2em
+      margin-bottom .28rem
+      font-size .16rem
     .block
       z-index 1
-      width 300px
-      margin-bottom 1em
+      width 3rem
+      margin-bottom .14rem
       overflow hidden
       clear both
       
@@ -102,27 +105,34 @@ a,a:active,a:link,a:visited
         float left
         overflow hidden
         width 60%
-        height 24px
-        line-height 24px
+        height .24rem
+        line-height .24rem
         white-space nowrap
         text-transform uppercase
-        font-size 16px
+        font-size .16rem
         &::after
           content '\00a0\00a0\00a0.................................'
       ul
         float right
         box-sizing border-box
         width 40%
-        width 120px
-        padding-left 15px
+        width 1.2rem
+        padding-left .15rem
         text-align left
-        font-size 14px
+        font-size .14rem
         li
-          height 24px
-          line-height 26px
+          height .24rem
+          line-height .26rem
           a
             float left
             height 100%
             transition all .2s
             &:hover
               color #f99
+
+@media screen and (max-device-width: 667px)
+  .sec-2
+    .content
+      .block
+        margin-left auto
+        margin-right auto
