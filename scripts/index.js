@@ -1,20 +1,53 @@
+HTMLElement.prototype.addClass = function(className) {
+    if (!this.classList.length) {
+      this.className += className;
+    } else if (this.className.indexOf(className) < 0) {
+      this.className += ' ' + className;
+    }
+
+    return this;
+  }
+  // 删除样式
+HTMLElement.prototype.removeClass = function(className) {
+  if (this.classList[0] === className) {
+    this.className = this.className.replace(className, '');
+  } else {
+    this.className = this.className.replace(' ' + className, '');
+  }
+
+  return this;
+}
+
+function $(selector) {
+  if (!selector) return
+
+  if (selector.indexOf('#') > -1) {
+    selector = selector.replace('#', '');
+    return document.getElementById(selector);
+  } else if (selector.indexOf('.') > -1) {
+    selector = selector.replace('.', '');
+    return document.getElementsByClassName(selector);
+  } else {
+    return document.querySelectorAll(selector);
+  }
+}
+
 window.onload = function() {
-  particlesJS.load('particles-js',function(){
-    showEl('particles-js');
+  particlesJS.load('particles-js', function() {
+    showEl('#particles-js');
   });
 }
 
-var fontLoader = new FontLoader(['lombok'],{
-  fontLoaded: function(font){
-    showEl('jf');
-    console.log("font loaded: " + font.family);
+var fontLoader = new FontLoader(['lombok'], {
+  fontLoaded: function(font) {
+    showEl('#jf');
   }
 }, 3000);
 fontLoader.loadFonts();
 
-function showEl(id){
-  var el = document.getElementById(id);
-  if(el){
+function showEl(id) {
+  var el = $(id);
+  if (el) {
     el.style.opacity = 1;
   }
 }
@@ -36,16 +69,18 @@ function computeScrollPx(e) {
   return e.wheelDelta ? e.wheelDelta : (e.detail ? e.detail : 0)
 }
 
-var sec1 = document.getElementsByClassName('sec-1')[0];
-var sec2 = document.getElementsByClassName('sec-2')[0];
+var sec1 = $('.sec-1')[0];
+var sec2 = $('.sec-2')[0];
 
 function scrollUp() {
-  console.log('up')
-  sec1.style.transform = sec2.style.transform = 'translateY(0)';
+  [sec1, sec2].map(function(el) {
+    el.removeClass('down').addClass('up')
+  })
 }
 
 function scrollDown() {
-  console.log('down')
-  sec1.style.transform = sec2.style.transform = 'translateY(-100%)';
+  [sec1, sec2].map(function(el) {
+    el.removeClass('up').addClass('down')
+  })
 
 }

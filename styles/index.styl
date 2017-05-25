@@ -5,6 +5,13 @@
   font-weight normal
 }
 
+t(time)
+  transition all time
+  
+transform(type)
+  transform type
+  -webkit-transform type
+
 html
   height 100%
   font 625%/1 Helvetica, arial, sans-serif
@@ -37,7 +44,7 @@ a,a:active,a:link,a:visited
   overflow hidden
   z-index 0
   opacity 0
-  transition all 3s
+  t 3s
   
 .sec-1
 .sec-2
@@ -49,7 +56,11 @@ a,a:active,a:link,a:visited
   margin 0 auto
   text-align center
   color #fff
-  transition all .5s
+  t .5s
+  &.up
+    transform translate3d(0,0,0)
+  &.down
+    transform translate3d(0,-100%,0)  
 
 .sec-1
   .content
@@ -59,7 +70,7 @@ a,a:active,a:link,a:visited
   
     h1
       margin-bottom .18rem
-      transition all 1.5s
+      t 1.5s
       font .36rem 'lombok', Helvetica, arial, sans-serif
       line-height 1
       opacity 0
@@ -70,7 +81,7 @@ a,a:active,a:link,a:visited
       em
         position relative
         span
-          transition all .3s
+          t .3s
           &.replacer
             display none
             position absolute
@@ -83,7 +94,7 @@ a,a:active,a:link,a:visited
       line-height 2
       letter-spacing .02rem
       font-size .16rem
-      transition all .2s
+      t .2s
       &:hover
         color #f99
 
@@ -94,6 +105,7 @@ a,a:active,a:link,a:visited
     p
       margin-bottom .28rem
       font-size .16rem
+      line-height 2
     .block
       z-index 1
       width 3rem
@@ -126,7 +138,7 @@ a,a:active,a:link,a:visited
           a
             float left
             height 100%
-            transition all .2s
+            t .2s
             &:hover
               color #f99
 
