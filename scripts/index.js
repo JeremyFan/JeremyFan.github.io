@@ -36,6 +36,8 @@ window.onload = function() {
   particlesJS.load('particles-js', function() {
     showEl('#particles-js');
   });
+
+  initTouchEvents();
 }
 
 var fontLoader = new FontLoader(['lombok'], {
@@ -84,3 +86,24 @@ function scrollDown() {
   })
 
 }
+
+function initTouchEvents(){
+  document.body.addEventListener('swipedown', function(){
+    console.log('down')
+    scrollUp();
+  });
+
+  document.body.addEventListener('swipeup', function(){
+    scrollDown();
+  });
+
+  new Touch(document.body)
+}
+
+window.addEventListener('keydown', function(e){
+  if(e.key == 'ArrowUp'){
+    scrollUp();
+  } else if (e.key == 'ArrowDown'){
+    scrollDown();
+  }
+})
