@@ -89,7 +89,6 @@ function scrollDown() {
 
 function initTouchEvents(){
   document.body.addEventListener('swipedown', function(){
-    console.log('down')
     scrollUp();
   });
 

@@ -99,19 +99,19 @@
 
     if (null !== t.o) {
       t.o.addEventListener('touchstart', function(e){
-        e.preventDefault();
+        // e.preventDefault();
         t.e = e;
         t.reset();
       }, false);
 
       t.o.addEventListener('touchmove', function(e){
-        e.preventDefault();
+        // e.preventDefault();
         t.e = e;
         t.update();
       }, false);
 
       t.o.addEventListener('touchend', function(e){                
-        e.preventDefault();
+        // e.preventDefault();
         t.e = e;        
         t.p2.t = e.timeStamp;
         var d, dd = t.distance(), tt = t.time();        
@@ -132,7 +132,7 @@
       }, false);
 
       t.o.addEventListener('gesturestart', function(e){
-        e.preventDefault();
+        // e.preventDefault();
         t.e = e;
         var i,j,s = [], style = w.getComputedStyle(t.o, null);
         for(i = 0, j = style.length; i < j; i++){
@@ -142,13 +142,13 @@
       }, false);
 
       t.o.addEventListener('gesturechange', function(e){
-        e.preventDefault();
+        // e.preventDefault();
         t.e = e;
         t.pinch();
       }, false);
 
       t.o.addEventListener('gestureend', function(e){        
-        e.preventDefault();
+        // e.preventDefault();
         t.p1.t = e.timeStamp - (t.tt + 1);
         t.p2.t = e.timeStamp;       
       }, false);
