@@ -6,6 +6,10 @@
     "type": "git",
     "url": "git+https://github.com/JeremyFan/JeremyFan.github.io.git"
   },
+  "scripts": {
+    "dev": "gulp dev",
+    "build": "gulp pub"
+  },
   "keywords": [
     "static",
     "canvas",
