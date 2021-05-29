@@ -55,6 +55,7 @@ a,a:active,a:link,a:visited
   
 .sec-1
 .sec-2
+  position relative
   display flex
   overflow hidden
   justify-content center
@@ -64,10 +65,27 @@ a,a:active,a:link,a:visited
   text-align center
   color #fff
   t .5s
+  
   &.up
     transform translate3d(0,0,0)
   &.down
-    transform translate3d(0,-100%,0)  
+    transform translate3d(0,-100%,0)
+
+  .go-up, .go-down
+    position absolute
+    width 32px
+    height 32px
+    background-size cover
+    animation shine linear 5s infinite
+    cursor pointer
+  .content a
+    display block
+    line-height 2
+    letter-spacing .02rem
+    font-size .16rem
+    t .2s
+    &:hover
+      color #f99
 
 .sec-1
   .content
@@ -77,7 +95,7 @@ a,a:active,a:link,a:visited
   
     h1
       margin-bottom .18rem
-      t 1.5s
+      transition opacity 1.5s
       font .36rem 'lombok', Helvetica, arial, sans-serif
       line-height 1
       opacity 0
@@ -85,6 +103,7 @@ a,a:active,a:link,a:visited
       margin-bottom .22rem
       font-size .22rem
       letter-spacing .025rem
+      line-height .28rem
       em
         position relative
         span
@@ -95,15 +114,9 @@ a,a:active,a:link,a:visited
             top 0
             left 0
             transform translateY(100%)
-      
-    a
-      display block
-      line-height 2
-      letter-spacing .02rem
-      font-size .16rem
-      t .2s
-      &:hover
-        color #f99
+  .go-down
+    bottom .32rem
+    background-image url(../public/down.svg)
 
 .sec-2
   .content
@@ -119,6 +132,8 @@ a,a:active,a:link,a:visited
       margin-bottom .14rem
       overflow hidden
       clear both
+      &.back-block
+        margin-bottom .22rem
       
       h3
         float left
@@ -147,6 +162,26 @@ a,a:active,a:link,a:visited
             t .2s
             &:hover
               color #f99
+            
+            &.back
+              margin-top .08rem
+  .go-up
+    top .32rem
+    background-image url(../public/up.svg)
+
+  .footer
+    position absolute
+    font-size .12rem
+    right .08rem
+    bottom .08rem
+    a 
+      opacity .3
+
+@keyframes shine {
+  0% {opacity: .5}
+  50% {opacity: .9}
+  100% {opacity: .5}
+}
 
 @media screen and (max-device-width: 667px)
   .sec-2

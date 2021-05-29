@@ -1,3 +1,7 @@
+import '../styles/index.styl'
+import './particles'
+import './touch'
+
 HTMLElement.prototype.addClass = function(className) {
     if (!this.classList.length) {
       this.className += className;
@@ -37,15 +41,19 @@ window.onload = function() {
     showEl('#particles-js');
   });
 
+  document.fonts.ready.then(function() {
+    showEl('#jf');
+  });
+
   initTouchEvents();
 }
 
-var fontLoader = new FontLoader(['lombok'], {
-  fontLoaded: function(font) {
-    showEl('#jf');
-  }
-}, 3000);
-fontLoader.loadFonts();
+// var fontLoader = new FontLoader(['lombok'], {
+//   fontLoaded: function(font) {
+//     showEl('#jf');
+//   }
+// }, 3000);
+// fontLoader.loadFonts();
 
 function showEl(id) {
   var el = $(id);
@@ -84,7 +92,6 @@ function scrollDown() {
   [sec1, sec2].map(function(el) {
     el.removeClass('up').addClass('down')
   })
-
 }
 
 function initTouchEvents(){
@@ -106,3 +113,6 @@ window.addEventListener('keydown', function(e){
     scrollDown();
   }
 })
+
+window.scrollDown = scrollDown
+window.scrollUp = scrollUp
